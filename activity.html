@@ -1,0 +1,9 @@
+---
+layout: page
+title: 活動内容
+permalink: /activity/
+slug: activity
+---
+
+{% capture activity-html %}{% include activity.md %}{% endcapture %}
+{{ activity-html | markdownify }}

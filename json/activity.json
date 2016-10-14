@@ -1,0 +1,16 @@
+---
+layout: json
+permalink: /json/activity.json
+---
+
+{% for page in site.pages %}
+  {% if page.slug contains 'activity' %}
+    {% capture activity_content_md %}{% include activity.md %}{% endcapture %}
+    {% assign activity_content_html = activity_content_md | markdownify | strip_newlines %}
+    {
+      title:   "{{ page.title }}",
+      content: "{{ activity_content_html }}"
+    }
+    {% break %}
+  {% endif%}
+{% endfor %}

@@ -1,0 +1,21 @@
+title: kosen10s datastore
+email: nct2010s@gmail.com
+description: >
+  kosen10sは2010年になぜか高専に入学しちゃった人の集まる場所です。
+  2010年に高専に入学した高専OB/OGならもちろん、誰でも参加できます。
+  普段は同い年どうし、slack(チャット)でワイワイしています。
+  また定期的にイベントも実施しています。
+baseurl: "/datastore"
+url: "kosen10s.net"
+twitter_username: kosen10s
+github_username:  kosen10s
+event_url: "http://kosen10s.connpass.com"
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

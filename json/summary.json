@@ -1,0 +1,8 @@
+---
+layout: json
+permalink: /json/summary.json
+---
+
+{
+  description: "{{ site.description | strip_newlines }}"
+}

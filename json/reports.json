@@ -1,0 +1,20 @@
+---
+layout: json
+permalink: /json/reports.json
+---
+[
+  {% for post in site.posts %}
+  {% if post.type == 'report' %}
+    {% if comma_judgement %},{% endif %}
+      {% assign comma_judgement = true %}
+      {% capture activity_content_md %}{{ post.content }}{% endcapture %}
+      {% assign activity_content_html = activity_content_md | markdownify | strip_newlines %}
+      {
+        title:      "{{ post.title }}",
+        content:    "{{ activity_content_html }}",
+        thumbnail:  "{{ post.thumbnail }}",
+        categories: ["{{ post.categories | join: '","' }}"]
+      }
+    {% endif %}
+  {% endfor %}
+]
